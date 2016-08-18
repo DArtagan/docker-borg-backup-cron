@@ -1,0 +1,1 @@
+0 6 * * * /env/bin/borg create -v --stats --compression lz4 /backup_repository::'{now:%Y-%m-%d}' /backup_sources
