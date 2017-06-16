@@ -1,7 +1,8 @@
 FROM dartagan/borg-backup
 MAINTAINER William Weiskopf <william@weiskopf.me>
 
-COPY crontab /var/spool/cron/crontabs/root
+COPY crontab /crontab.temp
+RUN /usr/bin/crontab /crontab.temp
 
 USER root
 
