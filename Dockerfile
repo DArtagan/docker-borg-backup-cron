@@ -8,5 +8,5 @@ USER root
 
 ENTRYPOINT []
 
-CMD crond -l 0 -f
+CMD ["crond", "-l", "0", "-f"]
 
