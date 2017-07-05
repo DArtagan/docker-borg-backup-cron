@@ -3,7 +3,7 @@
 
  It's up to you to initialize the backup repository, set up your volumes, etc.  This package is just a borg executable and a framework for running cron.
 
-By default, the cron will backup everything mounted at /backup_sources to a repository in /backup_repository, every day at 6:00 AM.  To override this, you'll need to make your own crontab and mount (docker run -v ...) it over the crontab in /var/spool/cron/crontabs/root.
+By default, the cron will backup everything mounted at /backup_sources to a repository in /backup_repository, every day at 6:00 AM.  To override this, you'll need to make your own crontab and mount (docker run -v ...) it over the crontab /crontab.
 
 ## Getting started
 
@@ -18,6 +18,7 @@ $ docker up --env PASSPHRASE \
     -v /etc/localtime:/etc/localtime:ro \
     -v /path/to/repo:/backup_repo \
     -v /path/to/source:/backup_source \ 
+    -v /<path/to/alternate/crontab>:/crontab:ro
     dartagan/borg-backup-cron
 ```
 
