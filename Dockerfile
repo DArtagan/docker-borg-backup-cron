@@ -6,5 +6,5 @@ COPY crontab /crontab
 
 ENTRYPOINT []
 
-CMD [sh, -c, "crontab /crontab && crond -d 0 -f"]
+CMD ["sh", "-c", "crontab /crontab && crond -d 0 -f"]
 
