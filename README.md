@@ -1,3 +1,6 @@
+Borgmatic is excellent and you should use its Docker container rather than this one.  https://hub.docker.com/r/b3vis/borgmatic/
+
+
 # docker-borg-backup-cron
  Borg: Run backups in a cron scheduled manner. A child of the dartagan/borg-backup Docker image.
 
